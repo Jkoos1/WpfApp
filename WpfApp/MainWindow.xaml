@@ -6,7 +6,59 @@
         xmlns:local="clr-namespace:WpfApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
 
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\PC\WS\Work\WPF\WpfApp\WpfApp\Assets\log-in.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <TextBox x:Name="usernameInput" FontFamily="Robot"
+                     FontWeight="Light"
+                     Text="Username"
+                     FontSize="15"
+                     Background="White"
+                     Foreground="Gray"
+                     BorderThickness="0"
+                     Width="200"
+                     Height="34"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     TextAlignment="Left"
+                     Margin="0,0,0,10"
+                     HorizontalAlignment="Center"/>
+            
+            <TextBox x:Name="passwordInput" FontFamily="Robot"
+                     FontWeight="Light"
+                     Text="Password"
+                     FontSize="15"
+                     Background="White"
+                     Foreground="Gray"
+                     BorderThickness="0"
+                     Width="200"
+                     Height="34"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     TextAlignment="Left"
+                     HorizontalAlignment="Center"/>
+
+            <Button Background="#9fd533"         
+                     BorderThickness="0"
+                     Width="200"
+                     Height="34"
+                     HorizontalContentAlignment="Center"
+                     Margin="0,10,0,0"
+                     HorizontalAlignment="Center" 
+                     Click="CheckLoginInfo">
+                <TextBox FontFamily="Robot"
+                     FontWeight="Bold"
+                     Text="Log In"
+                     FontSize="15"
+                     Foreground="White"
+                     Background="Transparent"
+                    />
+            </Button>
+
+        </StackPanel>
     </Grid>
 </Window>

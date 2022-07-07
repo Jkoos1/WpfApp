@@ -14,12 +14,20 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
+        }
+
+        private void CheckLoginInfo(object sender, RoutedEventArgs e) {
+            string password = "Vault";
+            string userInput = passwordInput.Text.ToString();
+            if (userInput == password) {
+                MessageBox.Show("All g mate");
+            } else {
+                MessageBox.Show("Nah man");
+            }
         }
     }
 }
