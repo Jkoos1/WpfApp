@@ -8,7 +8,38 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\ico-lock.png" />
+    <None Remove="Assets\Images\ico-username.png" />
+    <None Remove="Assets\Images\log-in.png" />
+    <None Remove="Assets\Images\server-list.png" />
+    <None Remove="Assets\Images\testioLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\ico-lock.png" />
+    <Resource Include="Assets\Images\testioLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Caliburn.Micro" Version="4.0.210" />
+    <PackageReference Include="Caliburn.Micro.Core" Version="4.0.210" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\ico-username.png" />
+    <Resource Include="Assets\Images\log-in.png" />
+    <Resource Include="Assets\Images\server-list.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\ApplicationResources.aml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
