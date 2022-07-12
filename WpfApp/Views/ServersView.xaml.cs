@@ -15,8 +15,11 @@ using System.Windows.Shapes;
 
 namespace WpfApp.Views {
     /// <summary>
-    /// Interaction logic for LoginView.xaml
+    /// Interaction logic for ServersView.xaml
     /// </summary>
-    public partial class LoginViewModel : UserControl {
+    public partial class ServersView : UserControl {
+        public ServersView() {
+            InitializeComponent();
+        }
     }
 }

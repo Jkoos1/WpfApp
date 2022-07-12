@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:WpfApp.Views"
         mc:Ignorable="d"
         Title="App" Height="800" Width="1200"
-        WindowStartupLocation="CenterScreen" Visibility="Visible" Background="#0b0f27">
+        WindowStartupLocation="CenterScreen" Visibility="Visible">
     <Grid>
-        <ContentControl x:Name="ActiveItem" Margin="5" />
+        <ContentControl x:Name="ActiveItem"/>
         <TabItem>
             <Frame Source="LoginView.xaml" />
         </TabItem>

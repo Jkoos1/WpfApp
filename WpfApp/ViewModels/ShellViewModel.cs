@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace WpfApp.ViewModels {
 
-    public class ShellViewModel : Screen {
+    public class ShellViewModel : Conductor<object> {
 
-        
+        IEventAggregator _events;
+        public ShellViewModel(IEventAggregator events) {
+
+            ActivateItemAsync(IoC.Get<LoginViewModel>());
+        }
 
     }
 }
