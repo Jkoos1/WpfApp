@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 using WpfApp.Models;
 
 namespace WpfApp.Interfaces {
-    public interface IAuthorizationHelper {
+    public interface IServerService {
 
-        Token token { get; }
+        Task<List<Server>> ListServers();
 
-        Task Login(string username, string password);
     }
 }

@@ -19,9 +19,9 @@ namespace WpfApp.ViewModels {
         private string _password;
 
         private IEventAggregator _events;
-        private IAuthorizationHelper _authorizationHelper;
+        private IAuthorizationService _authorizationHelper;
 
-        public LoginViewModel(IEventAggregator events, IAuthorizationHelper authorizationHelper) {
+        public LoginViewModel(IEventAggregator events, IAuthorizationService authorizationHelper) {
             _events = events;
             _authorizationHelper = authorizationHelper; 
         }

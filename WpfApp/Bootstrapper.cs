@@ -24,7 +24,8 @@ namespace WpfApp {
             _container
                 .Singleton<IWindowManager, WindowManager>()
                 .Singleton<IEventAggregator, EventAggregator>()
-                .Singleton<IAuthorizationHelper, AuthorizationService>();
+                .Singleton<IAuthorizationService, AuthorizationService>()
+                .Singleton<IServerService, ServerService>();
 
             GetType().Assembly.GetTypes()
                 .Where(type => type.IsClass)

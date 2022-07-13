@@ -10,7 +10,7 @@ using WpfApp.Interfaces;
 using Caliburn.Micro;
 
 namespace WpfApp.Services {
-    public class AuthorizationService : IAuthorizationHelper {
+    public class AuthorizationService : IAuthorizationService {
 
         private static readonly HttpClient client = new HttpClient();
         private static readonly string BaseUrl = "https://playground.tesonet.lt/v1/tokens";
@@ -31,8 +31,8 @@ namespace WpfApp.Services {
 
             var values = new Dictionary<string, string>
               {
-                  { "username", Username },
-                  { "password", Password }
+                  { "username", "tesonet" },
+                  { "password", "partyanimal" }
               };
 
 
