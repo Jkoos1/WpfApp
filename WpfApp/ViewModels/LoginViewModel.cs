@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Caliburn.Micro;
-using System.Net.Http;
-using System.Text.Json;
 using WpfApp.Events;
-using WpfApp.Models;
-using WpfApp.Services;
 using WpfApp.Interfaces;
 
 namespace WpfApp.ViewModels {
