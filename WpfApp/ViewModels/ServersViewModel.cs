@@ -31,7 +31,6 @@ namespace WpfApp.ViewModels {
 
             var serversList = await _serverService.ListServers();
             ServerList = new BindingList<Server>(serversList);
-            var yes = 5;
         }
 
     }
