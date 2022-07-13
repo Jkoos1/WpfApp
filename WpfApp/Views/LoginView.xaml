@@ -6,7 +6,6 @@
       xmlns:local="clr-namespace:WpfApp.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
-
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.Background>
             <ImageBrush ImageSource="{StaticResource backgroundImage}" Stretch="UniformToFill"/>
@@ -18,21 +17,21 @@
             <Border Background="White" Margin="10" BorderThickness="1" Width="300" Height="55" CornerRadius="5">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" Margin="5,0,0,0">
                     <Image Source="{StaticResource iconUserName}" Width="15" Stretch="Uniform"/>
-                    <TextBox x:Name="Username" Text="Username" FontSize="16"  Margin="8,0,0,0" VerticalAlignment="Center" BorderThickness="0"/>
+                    <TextBox x:Name="Username" Text="Username" FontSize="16"  Margin="8,0,0,0" VerticalAlignment="Center" BorderThickness="0" Foreground="Gray"/>
                 </StackPanel>
             </Border>
 
             <Border Background="White" Margin="10" BorderThickness="1" Width="300" Height="55" CornerRadius="5">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" Margin="5,0,0,0">
                     <Image Source="{StaticResource iconPassword}" Width="15" Stretch="Uniform"/>
-                    <TextBox x:Name="Password" Text="Password" FontSize="16" Margin="8,0,0,0" VerticalAlignment="Center" BorderThickness="0"/>
+                    <TextBox x:Name="Password" Text="Password" FontSize="16" Margin="8,0,0,0" VerticalAlignment="Center" BorderThickness="0" Foreground="Gray"/>
                 </StackPanel>
             </Border>
 
             <Border Margin="10" BorderThickness="1" Width="300" Height="55" CornerRadius="5">
                 <Button x:Name="Login" Content="Log In" Background="#9fd533" FontSize="16" Foreground="White" IsDefault="True"/>
             </Border>
-            
+
         </StackPanel>
     </Grid>
 </UserControl>
