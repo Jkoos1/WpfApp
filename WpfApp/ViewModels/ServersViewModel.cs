@@ -1,17 +1,21 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Threading.Tasks;
 using Caliburn.Micro;
 using WpfApp.Interfaces;
 using WpfApp.Models;
+using WpfApp.Events;
 
 namespace WpfApp.ViewModels {
     public class ServersViewModel : Screen {
 
-        IServerService _serverService;
+        private IServerService _serverService;
+        private IEventAggregator _events;
         private BindingList<Server> _serverList;
         
-        public ServersViewModel(IServerService serverService) {
+        public ServersViewModel(IServerService serverService, IEventAggregator events) {
             _serverService = serverService;
+            _events = events;
         }
 
         public BindingList<Server> ServerList {
@@ -31,6 +35,14 @@ namespace WpfApp.ViewModels {
 
             var serversList = await _serverService.ListServers();
             ServerList = new BindingList<Server>(serversList);
+        }
+
+        public async void Logout() {           
+            try {
+                _events.PublishOnUIThreadAsync(new LogoutEvent());
+            }
+            catch (Exception ex) {
+            }
         }
 
     }

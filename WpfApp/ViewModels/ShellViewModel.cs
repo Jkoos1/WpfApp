@@ -10,16 +10,18 @@ namespace WpfApp.ViewModels {
 
         IEventAggregator _events;
         ServersViewModel _serversViewModel;
+        LoginViewModel _loginViewModel;
 
-        public ShellViewModel(IEventAggregator events, ServersViewModel serversViewModel) {
+        public ShellViewModel(IEventAggregator events, ServersViewModel serversViewModel, LoginViewModel loginViewModel) {
 
             _serversViewModel = serversViewModel;
+            _loginViewModel = loginViewModel;
 
             _events = events;
             _events.Subscribe(this);
 
             ActivateItemAsync(IoC.Get<LoginViewModel>());
-
+            
         }
 
         Task IHandle<LoginEvent>.HandleAsync(LoginEvent message, CancellationToken cancellationToken) {
@@ -28,7 +30,8 @@ namespace WpfApp.ViewModels {
         }
 
         Task IHandle<LogoutEvent>.HandleAsync(LogoutEvent message, CancellationToken cancellationToken) {
-            throw new NotImplementedException();
+            ActivateItemAsync(_loginViewModel);
+            return Task.CompletedTask;
         }
     }
 }

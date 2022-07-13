@@ -22,6 +22,7 @@ namespace WpfApp.Services {
         }
 
         public async Task<List<Server>> ListServers() {
+            client.DefaultRequestHeaders.Clear();
             client.DefaultRequestHeaders.Add("Authorization", $"Bearer {_authorizationService.token.token}");
             var response = await client.GetAsync(BaseUrl);
 

@@ -8,6 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
-        <TextBlock Text="Hello" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <DataGrid x:Name="ServerList" HorizontalAlignment="Left">
+            <DataGrid.Columns>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Logout" Content="Logout" FontSize="40" Foreground="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center"/>
     </Grid>
 </UserControl>

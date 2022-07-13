@@ -52,8 +52,7 @@ namespace WpfApp.Services {
             else {
                 throw new Exception("Login failed");
             }
-
+            
         }
-
     }
 }
