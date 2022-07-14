@@ -6,6 +6,7 @@ using System.Windows;
 using WpfApp.ViewModels;
 using WpfApp.Interfaces;
 using WpfApp.Services;
+using System.Windows.Controls;
 
 namespace WpfApp {
     public class Bootstrapper : BootstrapperBase {
@@ -14,6 +15,11 @@ namespace WpfApp {
 
         public Bootstrapper() {
             Initialize();
+
+            ConventionManager.AddElementConvention<PasswordBox>(
+            PasswordBoxService.BoundPasswordProperty,
+            "Password",
+            "PasswordChanged");
         }
 
         protected override void Configure() {

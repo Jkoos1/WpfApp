@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp.Views"
         mc:Ignorable="d"
-        Title="App" Height="900" Width="1200"
+        Title="App" Height="780" Width="1460"
         WindowStartupLocation="CenterScreen" Visibility="Visible">
     <DockPanel>
         <ContentControl x:Name="LoginView" DockPanel.Dock="Top"/>

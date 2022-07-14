@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Input;
 using Caliburn.Micro;
 using WpfApp.Events;
 using WpfApp.Interfaces;
@@ -9,6 +10,7 @@ namespace WpfApp.ViewModels {
 
         private string _username;
         private string _password;
+        private string _errorMessage;
 
         private IEventAggregator _events;
         private IAuthorizationService _authorizationHelper;
@@ -17,7 +19,6 @@ namespace WpfApp.ViewModels {
             _events = events;
             _authorizationHelper = authorizationHelper; 
         }
-
         public string Username {
             get { return _username; }
             set {
@@ -34,15 +35,24 @@ namespace WpfApp.ViewModels {
             }
         }
 
+        public string ErrorMessage {
+            get { return _errorMessage; }
+            set {
+                _errorMessage = value;
+                NotifyOfPropertyChange(() => ErrorMessage);
+            }
+        }
+
         public async void Login() {
             try {
                 await _authorizationHelper.Login(Username, Password);
-                _events.PublishOnUIThreadAsync(new LoginEvent());
+                _events.PublishOnUIThreadAsync(new LoginEvent());               
             }
             catch (Exception ex) {
+                ErrorMessage = ex.Message;
             }
             
-        }
+        }       
 
     }
 

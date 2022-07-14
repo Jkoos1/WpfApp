@@ -29,8 +29,8 @@ namespace WpfApp.Services {
 
             var values = new Dictionary<string, string>
               {
-                  { "username", "tesonet" },
-                  { "password", "partyanimal" }
+                  { "username", Username },
+                  { "password", Password }
               };
 
 
@@ -50,7 +50,7 @@ namespace WpfApp.Services {
                 }
             }
             else {
-                throw new Exception("Login failed");
+                throw new Exception("Login Failed");
             }
             
         }
