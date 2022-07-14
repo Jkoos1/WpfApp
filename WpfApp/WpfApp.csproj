@@ -23,6 +23,7 @@
   <ItemGroup>
     <PackageReference Include="Caliburn.Micro" Version="4.0.210" />
     <PackageReference Include="Caliburn.Micro.Core" Version="4.0.210" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.9" />
   </ItemGroup>
 
   <ItemGroup>

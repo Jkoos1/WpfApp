@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
       xmlns:local="clr-namespace:WpfApp.Views"
       mc:Ignorable="d" 
       d:DesignHeight="780" d:DesignWidth="1460">
@@ -17,19 +18,19 @@
             <Border Background="White" Margin="10" BorderThickness="1" Width="370" Height="60" CornerRadius="5">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" Margin="5,0,0,0">
                     <Image Source="{StaticResource iconUserName}" Margin="8,0,0,0" Width="15" Stretch="Uniform"/>
-                    <TextBox x:Name="Username" Text="Username" FontSize="16"  Margin="8,0,0,0" BorderThickness="0" Foreground="Gray" VerticalAlignment="Center" MinWidth="320"/>
+                    <TextBox x:Name="Username" mah:TextBoxHelper.Watermark="Username" FontSize="16"  Margin="8,0,0,0" BorderThickness="0" Foreground="Gray" VerticalAlignment="Center" MinWidth="320"/>
                 </StackPanel>
             </Border>
             
             <Border Name="PasswordBorder" Background="White" Margin="10" BorderThickness="1" Width="370" Height="60" CornerRadius="5">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" Margin="5,0,0,0">
                     <Image Source="{StaticResource iconPassword}" Margin="8,0,0,0" Width="15" Stretch="Uniform"/>
-                    <PasswordBox x:Name="Password" Password="partyanimal" FontSize="16" Margin="8,0,0,0" BorderThickness="0" Foreground="Gray" VerticalAlignment="Center" MinWidth="320"/>
+                    <PasswordBox x:Name="Password" mah:TextBoxHelper.Watermark="Password" FontSize="16" Margin="8,0,0,0" BorderThickness="0" Foreground="Gray" VerticalAlignment="Center" MinWidth="320"/>
                 </StackPanel>
             </Border>
 
             <Border Margin="10" BorderThickness="1" Width="370" Height="60" CornerRadius="5">
-                <Button x:Name="Login" Content="Log In" Background="#9fd533" FontSize="16" Foreground="White" IsDefault="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                <Button Cursor="Hand" x:Name="Login" Content="Log In" Background="#9fd533" FontSize="16" Foreground="White" IsDefault="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
             </Border>
 
             <Border  Width="370" Height="30">
