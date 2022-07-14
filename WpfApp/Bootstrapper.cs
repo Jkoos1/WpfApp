@@ -39,6 +39,8 @@ namespace WpfApp {
         }
 
         protected override void OnStartup(object sender, StartupEventArgs e) {
+
+            LogManager.GetLog = type => new LoggerService(type);
             DisplayRootViewForAsync<ShellViewModel>();
         }
 

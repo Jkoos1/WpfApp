@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection;
+using System.Windows;
 using Caliburn.Micro;
 using WpfApp.Events;
 using WpfApp.Interfaces;
@@ -13,6 +15,7 @@ namespace WpfApp.ViewModels {
 
         private IEventAggregator _events;
         private IAuthorizationService _authorizationHelper;
+        private static readonly ILog _logger = LogManager.GetLog(MethodBase.GetCurrentMethod().DeclaringType);
 
         public LoginViewModel(IEventAggregator events, IAuthorizationService authorizationHelper) {
             _events = events;
@@ -41,14 +44,14 @@ namespace WpfApp.ViewModels {
                 NotifyOfPropertyChange(() => ErrorMessage);
             }
         }
-
         public async void Login() {
             try {
                 await _authorizationHelper.Login(Username, Password);
-                _events.PublishOnUIThreadAsync(new LoginEvent());         
+                await _events.PublishOnUIThreadAsync(new LoginEvent());         
             }
             catch (Exception ex) {
-                ErrorMessage = ex.Message;               
+                _logger.Error(ex);
+                ErrorMessage = ex.Message;                 
             }
             
         }

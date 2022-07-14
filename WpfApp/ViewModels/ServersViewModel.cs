@@ -5,6 +5,7 @@ using Caliburn.Micro;
 using WpfApp.Interfaces;
 using WpfApp.Models;
 using WpfApp.Events;
+using System.Reflection;
 
 namespace WpfApp.ViewModels {
     public class ServersViewModel : Screen {
@@ -12,7 +13,8 @@ namespace WpfApp.ViewModels {
         private IServerService _serverService;
         private IEventAggregator _events;
         private BindingList<Server> _serverList;
-        
+        private static readonly ILog _logger = LogManager.GetLog(MethodBase.GetCurrentMethod().DeclaringType);
+
         public ServersViewModel(IServerService serverService, IEventAggregator events) {
             _serverService = serverService;
             _events = events;
@@ -42,6 +44,7 @@ namespace WpfApp.ViewModels {
                 _events.PublishOnUIThreadAsync(new LogoutEvent());
             }
             catch (Exception ex) {
+                _logger.Error(ex);
             }
         }
 
