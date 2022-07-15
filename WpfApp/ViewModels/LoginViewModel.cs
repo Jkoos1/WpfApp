@@ -26,6 +26,7 @@ namespace WpfApp.ViewModels {
             set {
                 _username = value;
                 NotifyOfPropertyChange(() => Username);
+                NotifyOfPropertyChange(() => CanLogin);
             }
         }
 
@@ -34,6 +35,7 @@ namespace WpfApp.ViewModels {
             set {
                 _password = value;
                 NotifyOfPropertyChange(() => Password);
+                NotifyOfPropertyChange(() => CanLogin);
             }
         }
 
@@ -44,6 +46,15 @@ namespace WpfApp.ViewModels {
                 NotifyOfPropertyChange(() => ErrorMessage);
             }
         }
+
+        public bool CanLogin {
+            get {if (Username?.Length > 0 && Password?.Length > 0) {
+                    return true;
+                }
+                return false;
+            }
+        }
+
         public async void Login() {
             try {
                 await _authorizationHelper.Login(Username, Password);
