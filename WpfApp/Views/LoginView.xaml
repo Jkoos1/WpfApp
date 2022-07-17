@@ -17,14 +17,14 @@
             <Border Style="{StaticResource usernameInputBorder}">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" Margin="5,0,0,0">
                     <Image Source="{StaticResource iconUserName}" Margin="12,0,0,0" Width="15" Stretch="Uniform"/>
-                    <TextBox x:Name="Username" Style="{StaticResource usernameTextBox}"/>
+                    <TextBox x:Name="Username" mah:TextBoxHelper.Watermark="Username" Style="{StaticResource usernameTextBox}"/>
                 </StackPanel>
             </Border>
 
             <Border Style="{StaticResource passwordInputBorder}">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch" Margin="5,0,0,0">
                     <Image Source="{StaticResource iconPassword}" Margin="12,0,0,0" Width="15" Stretch="Uniform"/>
-                    <PasswordBox x:Name="Password" Style="{StaticResource passwordTextBox}"/>
+                    <PasswordBox x:Name="Password" mah:TextBoxHelper.Watermark="Password" Style="{StaticResource passwordTextBox}"/>
                 </StackPanel>
             </Border>
 
