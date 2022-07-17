@@ -39,7 +39,7 @@ namespace WpfApp.ViewModels {
             ServerList = new BindingList<Server>(serversList);
         }
 
-        public async void Logout() {           
+        public async void Logout() {
             try {
                 _events.PublishOnUIThreadAsync(new LogoutEvent());
             }

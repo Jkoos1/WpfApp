@@ -8,15 +8,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Fonts\Roboto-Black.ttf" />
+    <None Remove="Assets\Fonts\Roboto-BlackItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Bold.ttf" />
+    <None Remove="Assets\Fonts\Roboto-BoldItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Italic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Light.ttf" />
+    <None Remove="Assets\Fonts\Roboto-LightItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Medium.ttf" />
+    <None Remove="Assets\Fonts\Roboto-MediumItalic.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Regular.ttf" />
+    <None Remove="Assets\Fonts\Roboto-Thin.ttf" />
+    <None Remove="Assets\Fonts\Roboto-ThinItalic.ttf" />
     <None Remove="Assets\Images\ico-lock.png" />
     <None Remove="Assets\Images\ico-username.png" />
     <None Remove="Assets\Images\log-in.png" />
     <None Remove="Assets\Images\server-list.png" />
+    <None Remove="Assets\Images\server-screen_background.png" />
     <None Remove="Assets\Images\testioLogo.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Fonts\Roboto-Black.ttf" />
+    <Resource Include="Assets\Fonts\Roboto-BlackItalic.ttf" />
+    <Resource Include="Assets\Fonts\Roboto-Bold.ttf" />
+    <Resource Include="Assets\Fonts\Roboto-BoldItalic.ttf" />
+    <Resource Include="Assets\Fonts\Roboto-Italic.ttf" />
+    <Resource Include="Assets\Fonts\Roboto-Light.ttf" />
+    <Resource Include="Assets\Fonts\Roboto-LightItalic.ttf" />
+    <Resource Include="Assets\Fonts\Roboto-Medium.ttf" />
+    <Resource Include="Assets\Fonts\Roboto-MediumItalic.ttf" />
+    <Resource Include="Assets\Fonts\Roboto-Regular.ttf" />
+    <Resource Include="Assets\Fonts\Roboto-Thin.ttf" />
+    <Resource Include="Assets\Fonts\Roboto-ThinItalic.ttf" />
     <Resource Include="Assets\Images\ico-lock.png" />
+    <Resource Include="Assets\Images\server-screen_background.png" />
     <Resource Include="Assets\Images\testioLogo.png" />
   </ItemGroup>
 

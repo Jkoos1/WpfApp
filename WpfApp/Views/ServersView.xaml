@@ -5,13 +5,19 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800">
+      d:DesignHeight="780" d:DesignWidth="1460">
 
-    <Grid>
-        <DataGrid x:Name="ServerList" HorizontalAlignment="Left">
-            <DataGrid.Columns>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button Cursor="Hand" x:Name="Logout" Content="Logout" FontSize="40" Foreground="DarkGray" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-    </Grid>
+    <DockPanel Background="White">
+        
+        <DockPanel DockPanel.Dock="Bottom" Height="650">
+            <DataGrid x:Name="ServerList" DockPanel.Dock="Left" Width="749" Style="{StaticResource dataGrid}">
+                <DataGrid.Columns>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Image Source="{StaticResource serverScreenBackground}" HorizontalAlignment="Right"/>
+        </DockPanel>
+
+        <Button x:Name="Logout" Style="{StaticResource logoutButton}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+
+    </DockPanel>
 </UserControl>

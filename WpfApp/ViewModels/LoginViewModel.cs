@@ -14,12 +14,12 @@ namespace WpfApp.ViewModels {
         private string _errorMessage;
 
         private IEventAggregator _events;
-        private IAuthorizationService _authorizationHelper;
+        private IAuthorizationService _authorizationService;
         private static readonly ILog _logger = LogManager.GetLog(MethodBase.GetCurrentMethod().DeclaringType);
 
-        public LoginViewModel(IEventAggregator events, IAuthorizationService authorizationHelper) {
+        public LoginViewModel(IEventAggregator events, IAuthorizationService authorizationService) {
             _events = events;
-            _authorizationHelper = authorizationHelper;
+            _authorizationService = authorizationService;
         }
         public string Username {
             get { return _username; }
@@ -57,8 +57,8 @@ namespace WpfApp.ViewModels {
 
         public async void Login() {
             try {
-                await _authorizationHelper.Login(Username, Password);
-                await _events.PublishOnUIThreadAsync(new LoginEvent());         
+                await _authorizationService.Login(Username, Password);
+                await _events.PublishOnUIThreadAsync(new LoginEvent());
             }
             catch (Exception ex) {
                 _logger.Error(ex);

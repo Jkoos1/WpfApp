@@ -6,5 +6,6 @@
     <BitmapImage x:Key="iconUserName" UriSource="/Assets/Images/ico-username.png" />
     <BitmapImage x:Key="iconPassword" UriSource="/Assets/Images/ico-lock.png" />
     <BitmapImage x:Key="server-list" UriSource="/Assets/Images/server-list.png" />
+    <BitmapImage x:Key="serverScreenBackground" UriSource="/Assets/Images/server-screen_background.png" />
 
 </ResourceDictionary>
