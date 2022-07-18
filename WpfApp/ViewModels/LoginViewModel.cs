@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Reflection;
-using System.Windows;
 using Caliburn.Micro;
 using WpfApp.Events;
 using WpfApp.Interfaces;

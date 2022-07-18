@@ -30,7 +30,7 @@ namespace WpfApp.ViewModels {
         }
 
         Task IHandle<LogoutEvent>.HandleAsync(LogoutEvent message, CancellationToken cancellationToken) {
-            ActivateItemAsync(_loginViewModel);
+            ActivateItemAsync(IoC.Get<LoginViewModel>());
             return Task.CompletedTask;
         }
     }
